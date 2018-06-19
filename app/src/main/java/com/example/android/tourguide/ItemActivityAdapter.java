@@ -12,15 +12,15 @@ import java.util.ArrayList;
 
 public class ItemActivityAdapter extends ArrayAdapter<ItemActivity> {
 
-    public ItemActivityAdapter(Context context, ArrayList<ItemActivity> itemActivities){
+    public ItemActivityAdapter(Context context, ArrayList<ItemActivity> itemActivities) {
         super(context, 0, itemActivities);
 
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-        if (listItemView == null){
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 

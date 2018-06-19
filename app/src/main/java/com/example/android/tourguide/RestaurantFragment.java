@@ -13,7 +13,7 @@ public class RestaurantFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView =  inflater.inflate(R.layout.fragment_template, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_template, container, false);
 
         final ArrayList<ItemActivity> itemActivities = new ArrayList<>();
         itemActivities.add(new ItemActivity("La Panacée", "Modern art museum with a hip cafe", R.drawable.panacee));

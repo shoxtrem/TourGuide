@@ -13,7 +13,7 @@ public class ParksFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView =  inflater.inflate(R.layout.fragment_template, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_template, container, false);
 
         final ArrayList<ItemActivity> itemActivities = new ArrayList<>();
         itemActivities.add(new ItemActivity("Jardin des Plantes", "Garden with a collection of flowers and trees", R.drawable.jardins_des_plantes));

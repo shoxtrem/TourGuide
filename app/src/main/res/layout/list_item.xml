@@ -1,50 +1,49 @@
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/text_container"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/verticalPadding"
+    android:paddingEnd="@dimen/listPaddingLeft"
+    android:paddingLeft="@dimen/listPaddingLeft"
+    android:paddingStart="@dimen/listPaddingLeft"
+    android:paddingTop="@dimen/verticalPadding">
+
+
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@android:color/white"
-        android:paddingBottom="@dimen/verticalPadding"
-        android:paddingEnd="@dimen/listPaddingLeft"
-        android:paddingLeft="@dimen/listPaddingLeft"
-        android:paddingStart="@dimen/listPaddingLeft"
-        android:paddingTop="@dimen/verticalPadding">
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"/>
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/name_text_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingTop="@dimen/titleTopPadding"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/listItemTitleTextSize"
+            tools:text="Activity Name" />
 
-            <TextView
-                android:id="@+id/name_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="8dp"
-                android:textColor="@android:color/black"
-                android:fontFamily="sans-serif-condensed"
-                android:textSize="25sp"
-                tools:text="Activity Name" />
-
-            <TextView
-                android:id="@+id/description_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/listItemSubValuesTextSize"
-                tools:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." />
-        </LinearLayout>
-
-
+        <TextView
+            android:id="@+id/description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/listItemSubValuesTextSize"
+            tools:text="Lorem ipsum" />
     </LinearLayout>
+
+
+</LinearLayout>
