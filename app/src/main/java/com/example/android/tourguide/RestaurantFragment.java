@@ -16,13 +16,12 @@ public class RestaurantFragment extends Fragment {
         View rootView =  inflater.inflate(R.layout.fragment_template, container, false);
 
         final ArrayList<ItemActivity> itemActivities = new ArrayList<>();
-        itemActivities.add(new ItemActivity("La Panacée", "Modern art museum with a hip cafe", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Restaurant Leclere", "", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Pastis Restaurant", "", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Restaurant l'Angelus", "", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Pizz'Art", "Pizzeria", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Léon de Bruxelles", "Mussels and french fries", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("La Boucherie", "Hamburger and meat restaurant", R.drawable.ic_launcher_background));
+        itemActivities.add(new ItemActivity("La Panacée", "Modern art museum with a hip cafe", R.drawable.panacee));
+        itemActivities.add(new ItemActivity("Restaurant Leclere", "", R.drawable.restaurant_leclere));
+        itemActivities.add(new ItemActivity("Pastis Restaurant", "", R.drawable.restaurant_pastis));
+        itemActivities.add(new ItemActivity("Restaurant l'Angelus", "", R.drawable.restaurant_angelus));
+        itemActivities.add(new ItemActivity("Léon de Bruxelles", "Mussels and french fries", R.drawable.leon_de_bruxelles));
+        itemActivities.add(new ItemActivity("La Boucherie", "Hamburger and meat restaurant", R.drawable.restaurant_la_boucherie));
 
         ItemActivityAdapter adapter = new ItemActivityAdapter(getActivity(), itemActivities);
 

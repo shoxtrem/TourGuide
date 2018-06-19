@@ -15,13 +15,13 @@ public class MuseumFragment extends Fragment{
         View rootView =  inflater.inflate(R.layout.fragment_template, container, false);
 
         final ArrayList<ItemActivity> itemActivities = new ArrayList<>();
-        itemActivities.add(new ItemActivity("La Panacée", "Modern art museum with a hip cafe", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Carré Saint Anne", "Contemporary art in a converted church", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Pavillon Populaire", "Cutting-edge photography exhibitions", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Musée du Vieux Montpellier", "Museum", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Musée Atger", "University museum with historic art", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Musée des arts décoratifs Sabatier d'Espeyran", "Art Museum", R.drawable.ic_launcher_background));
-        itemActivities.add(new ItemActivity("Musée Art Brut", "Art Museum", R.drawable.ic_launcher_background));
+        itemActivities.add(new ItemActivity("La Panacée", "Modern art museum with a hip cafe", R.drawable.panacee));
+        itemActivities.add(new ItemActivity("Carré Saint Anne", "Contemporary art in a converted church", R.drawable.carre_sainte_anne));
+        itemActivities.add(new ItemActivity("Pavillon Populaire", "Cutting-edge photography exhibitions", R.drawable.pavillon_populaire));
+        itemActivities.add(new ItemActivity("Musée du Vieux Montpellier", "Museum", R.drawable.musee_vieux));
+        itemActivities.add(new ItemActivity("Musée Atger", "University museum with historic art", R.drawable.atger));
+        itemActivities.add(new ItemActivity("Musée des arts décoratifs Sabatier d'Espeyran", "Art Museum", R.drawable.sabatier_espeyran));
+        itemActivities.add(new ItemActivity("Musée Art Brut", "Art Museum", R.drawable.art_brut));
 
         ItemActivityAdapter adapter = new ItemActivityAdapter(getActivity(), itemActivities);
 

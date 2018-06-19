@@ -1,17 +1,11 @@
-<!-- Layout for a single list item -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:orientation="horizontal">
-
-
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/text_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@android:color/white"
         android:paddingBottom="@dimen/verticalPadding"
         android:paddingEnd="@dimen/listPaddingLeft"
         android:paddingLeft="@dimen/listPaddingLeft"
@@ -21,8 +15,9 @@
 
         <ImageView
             android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher"/>
 
         <LinearLayout
@@ -35,10 +30,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="bottom"
-                android:textAppearance="?android:textAppearanceMedium"
+                android:paddingTop="8dp"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/listItemSubValuesTextSize"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="25sp"
                 tools:text="Activity Name" />
 
             <TextView
@@ -46,8 +41,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="bottom"
-                android:textAppearance="?android:textAppearanceMedium"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/listItemSubValuesTextSize"
                 tools:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)." />
@@ -55,4 +48,3 @@
 
 
     </LinearLayout>
-</LinearLayout>
