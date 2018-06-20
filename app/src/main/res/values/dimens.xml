@@ -4,6 +4,5 @@
     <dimen name="listPaddingLeft">16dp</dimen>
     <dimen name="listItemTitleTextSize">25sp</dimen>
     <dimen name="listItemSubValuesTextSize">12sp</dimen>
-    <dimen name="listTopActionBarPadding">12dp</dimen>
     <dimen name="titleTopPadding">8dp</dimen>
 </resources>

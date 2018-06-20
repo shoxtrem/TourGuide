@@ -1,6 +1,7 @@
 package com.example.android.tourguide;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,19 +12,19 @@ import java.util.ArrayList;
 
 public class MuseumFragment extends Fragment {
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_template, container, false);
 
-        final ArrayList<ItemActivity> itemActivities = new ArrayList<>();
-        itemActivities.add(new ItemActivity("La Panacée", "Modern art museum with a hip cafe", R.drawable.panacee));
-        itemActivities.add(new ItemActivity("Carré Saint Anne", "Contemporary art in a converted church", R.drawable.carre_sainte_anne));
-        itemActivities.add(new ItemActivity("Pavillon Populaire", "Cutting-edge photography exhibitions", R.drawable.pavillon_populaire));
-        itemActivities.add(new ItemActivity("Musée du Vieux Montpellier", "Museum", R.drawable.musee_vieux));
-        itemActivities.add(new ItemActivity("Musée Atger", "University museum with historic art", R.drawable.atger));
-        itemActivities.add(new ItemActivity("Musée des arts décoratifs Sabatier d'Espeyran", "Art Museum", R.drawable.sabatier_espeyran));
-        itemActivities.add(new ItemActivity("Musée Art Brut", "Art Museum", R.drawable.art_brut));
+        final ArrayList<Place> places = new ArrayList<>();
+        places.add(new Place(getString(R.string.museum_name_1), getString(R.string.museum_description_1), R.drawable.panacee));
+        places.add(new Place(getString(R.string.museum_name_2), getString(R.string.museum_description_2), R.drawable.carre_sainte_anne));
+        places.add(new Place(getString(R.string.museum_name_3), getString(R.string.museum_description_3), R.drawable.pavillon_populaire));
+        places.add(new Place(getString(R.string.museum_name_4), getString(R.string.museum_description_4), R.drawable.musee_vieux));
+        places.add(new Place(getString(R.string.museum_name_5), getString(R.string.museum_description_5), R.drawable.atger));
+        places.add(new Place(getString(R.string.museum_name_6), getString(R.string.museum_description_6), R.drawable.sabatier_espeyran));
+        places.add(new Place(getString(R.string.museum_name_7), getString(R.string.museum_description_7), R.drawable.art_brut));
 
-        ItemActivityAdapter adapter = new ItemActivityAdapter(getActivity(), itemActivities);
+        PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
 
         ListView listView = rootView.findViewById(R.id.list);
 

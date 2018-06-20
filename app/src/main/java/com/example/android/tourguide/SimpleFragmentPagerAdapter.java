@@ -1,27 +1,31 @@
 package com.example.android.tourguide;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
+class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[]{"Restaurants", "Museums", "Parks", "Landscapes"};
+    private final String[] tabTitles;
 
-    public SimpleFragmentPagerAdapter(FragmentManager fm) {
+    public SimpleFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
+        tabTitles = new String[]{context.getString(R.string.restaurant), context.getString(R.string.museums), context.getString(R.string.parks), context.getString(R.string.landscapes)};
     }
+
 
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new RestaurantFragment();
-        } else if (position == 1) {
-            return new MuseumFragment();
-        } else if (position == 2) {
-            return new ParksFragment();
-        } else {
-            return new LandscapeFragment();
+        switch (position) {
+            case 0:
+                return new RestaurantFragment();
+            case 1:
+                return new MuseumFragment();
+            case 2:
+                return new ParksFragment();
+            default:
+                return new LandscapeFragment();
         }
     }
 
