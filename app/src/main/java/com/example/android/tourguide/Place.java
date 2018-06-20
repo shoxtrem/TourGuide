@@ -13,15 +13,15 @@ class Place {
     /**
      * The name of the activity one can do in the city
      */
-    private final String ActivityName;
+    private final String activityName;
     /**
      * The description of the activity one can do in the city
      */
-    private final String ActivityDescription;
+    private final String activityDescription;
     /**
      * The ID for the image of the activity one can do in the city
      */
-    private final int ImageResourceId;
+    private final int imageResourceId;
 
     /**
      * @param newActivityName        is the name of the activity one can do in the city
@@ -29,36 +29,36 @@ class Place {
      * @param newImageResourceId     is the ID of the image for the activity one can do in the city
      */
     public Place(String newActivityName, String newActivityDescription, int newImageResourceId) {
-        ActivityName = newActivityName;
-        ActivityDescription = newActivityDescription;
-        ImageResourceId = newImageResourceId;
+        activityName = newActivityName;
+        activityDescription = newActivityDescription;
+        imageResourceId = newImageResourceId;
     }
 
     /**
      * @return the name of the activity one can do in the city
      */
     public String getActivityName() {
-        return ActivityName;
+        return activityName;
     }
 
     /**
      * @return the description of the activity one can do in the city
      */
     public String getActivityDescription() {
-        return ActivityDescription;
+        return activityDescription;
     }
 
     /**
      * @return the ID of the activity one can do in the city
      */
     public int getImageResourceId() {
-        return ImageResourceId;
+        return imageResourceId;
     }
 
     /**
      * @return whether the item has an image or not
      */
     public boolean hasImage() {
-        return ImageResourceId != NO_IMAGE_PROVIDED;
+        return imageResourceId != NO_IMAGE_PROVIDED;
     }
 }
